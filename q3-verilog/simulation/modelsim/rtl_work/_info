@@ -1,0 +1,188 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/simulation/modelsim
+vCD4024B
+Z1 !s110 1775842592
+!i10b 1
+!s100 01<DPE]PF>=bk:X[6dPL41
+IlVg_kHmmND7=iz9_TT?O63
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1775772380
+8C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/CD4024B.v
+FC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/CD4024B.v
+Z4 L0 11
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1775842591.000000
+!s107 C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/CD4024B.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus|C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/CD4024B.v|
+!i113 1
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus
+Z9 tCvgOpt 0
+n@c@d4024@b
+vCD4510B
+!s110 1775842590
+!i10b 1
+!s100 z;JSZ3ao>@9L;F;_PEiC<3
+IdQ<E4T6Ph3OhSoN0AM2@F0
+R2
+R0
+w1775772002
+8C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/CD4510B.v
+FC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/CD4510B.v
+Z10 L0 12
+R5
+r1
+!s85 0
+31
+!s108 1775842590.000000
+!s107 C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/CD4510B.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus|C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/CD4510B.v|
+!i113 1
+R7
+R8
+R9
+n@c@d4510@b
+vdecodificador_7seg
+Z11 !s110 1775842591
+!i10b 1
+!s100 Nh^HkG`gmzdze59e]JFMP3
+I=_LY9@fn=FhD5P]HY8AfR1
+R2
+R0
+w1775771213
+8C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/decodificador_7seg.v
+FC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/decodificador_7seg.v
+R10
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/decodificador_7seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus|C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/decodificador_7seg.v|
+!i113 1
+R7
+R8
+R9
+vdivisor_frequencia
+R1
+!i10b 1
+!s100 JJzS=f2FWjkGUWFWnMj<@0
+I1TPbM2ig77TDa3bB4QD]?0
+R2
+R0
+w1775771229
+8C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/divisor_frequencia.v
+FC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/divisor_frequencia.v
+Z12 L0 10
+R5
+r1
+!s85 0
+31
+Z13 !s108 1775842592.000000
+!s107 C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/divisor_frequencia.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus|C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/divisor_frequencia.v|
+!i113 1
+R7
+R8
+R9
+vffjk
+R11
+!i10b 1
+!s100 H3:j>UQfQmDDQZBD^R]aB0
+I?_V55n5lzX7DeZMT;`[1f1
+R2
+R0
+R3
+8C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/ffjk.v
+FC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/ffjk.v
+R12
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/ffjk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus|C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/ffjk.v|
+!i113 1
+R7
+R8
+R9
+vmux2_1
+R11
+!i10b 1
+!s100 Gh^AekR2O[O[G:a`I=ezT1
+IjB0FDQ]N1e8b:`[RHgTE<1
+R2
+R0
+w1775771251
+8C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/mux2_1.v
+FC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/mux2_1.v
+R12
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/mux2_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus|C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/mux2_1.v|
+!i113 1
+R7
+R8
+R9
+vrelogio
+R1
+!i10b 1
+!s100 HCdmLYn1El^XY3j@B=E2d2
+IgmY7KW@SlZTf[5dT5]2;S1
+R2
+R0
+w1775828068
+8C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/relogio.v
+FC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/relogio.v
+R4
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/relogio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus|C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/relogio.v|
+!i113 1
+R7
+R8
+R9
+vtb_relogio
+R1
+!i10b 1
+!s100 TA89OAhY]IXN_eic4;32E1
+IH9o^;HBn:F3dbB9OeUYOT3
+R2
+R0
+w1775835891
+8C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/tb_relogio.v
+FC:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/tb_relogio.v
+L0 14
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/tb_relogio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus|C:/Users/jp_da/Downloads/eletrica/ED2/Projetos/Lista1/Quartus/tb_relogio.v|
+!i113 1
+R7
+R8
+R9

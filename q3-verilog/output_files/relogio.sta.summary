@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_50mhz'
+Slack : -4.375
+TNS   : -51.233
+
+Type  : Slow 1200mV 85C Model Setup 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -1.805
+TNS   : -32.959
+
+Type  : Slow 1200mV 85C Model Hold 'divisor_frequencia:div_clk|clk_1hz'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_50mhz'
+Slack : 0.638
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -1.367
+TNS   : -21.728
+
+Type  : Slow 1200mV 85C Model Removal 'divisor_frequencia:div_clk|clk_1hz'
+Slack : 1.254
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50mhz'
+Slack : -3.000
+TNS   : -39.478
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -1.403
+TNS   : -40.687
+
+Type  : Slow 1200mV 0C Model Setup 'clk_50mhz'
+Slack : -4.003
+TNS   : -44.718
+
+Type  : Slow 1200mV 0C Model Setup 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -1.554
+TNS   : -27.970
+
+Type  : Slow 1200mV 0C Model Hold 'divisor_frequencia:div_clk|clk_1hz'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_50mhz'
+Slack : 0.590
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -1.154
+TNS   : -17.976
+
+Type  : Slow 1200mV 0C Model Removal 'divisor_frequencia:div_clk|clk_1hz'
+Slack : 1.151
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50mhz'
+Slack : -3.000
+TNS   : -39.478
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -1.403
+TNS   : -40.687
+
+Type  : Fast 1200mV 0C Model Setup 'clk_50mhz'
+Slack : -1.417
+TNS   : -8.406
+
+Type  : Fast 1200mV 0C Model Setup 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -0.210
+TNS   : -1.807
+
+Type  : Fast 1200mV 0C Model Hold 'divisor_frequencia:div_clk|clk_1hz'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_50mhz'
+Slack : 0.248
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -0.038
+TNS   : -0.152
+
+Type  : Fast 1200mV 0C Model Removal 'divisor_frequencia:div_clk|clk_1hz'
+Slack : 0.538
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50mhz'
+Slack : -3.000
+TNS   : -29.902
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisor_frequencia:div_clk|clk_1hz'
+Slack : -1.000
+TNS   : -29.000
+
+------------------------------------------------------------

@@ -1,0 +1,32 @@
+module CD4024B (
+    input  wire CP,  
+    input  wire R, 
+    output wire Q1,    
+    output wire Q2,   
+    output wire Q3,     
+    output wire Q4,    
+    output wire Q5,     
+    output wire Q6,    
+    output wire Q7      
+);
+ 
+    
+    reg [6:0] count;
+ 
+   
+    always @(negedge CP or posedge R) begin
+        if (R)
+            count <= 7'b0000000;  
+        else
+            count <= count + 1'b1; 
+    end
+    assign Q1 = count[0];
+    assign Q2 = count[1];
+    assign Q3 = count[2];
+    assign Q4 = count[3];
+    assign Q5 = count[4];
+    assign Q6 = count[5];
+    assign Q7 = count[6];
+ 
+endmodule
+ 

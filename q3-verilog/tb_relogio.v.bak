@@ -1,0 +1,124 @@
+`timescale 1ns / 1ps
+// =============================================================
+// Autor    : Claude (Anthropic)
+// Data     : 10/04/2026
+// Testbench: tb_relogio
+// Projeto  : Relógio Digital 24h — v2
+// Descrição: Valida contagem, rollover (59:59→00:00, 23:59→00:00)
+//            e alternância HH:MM ↔ MM:SS via SEL.
+//            Log reduzido: exibe apenas a cada mudança de minuto.
+// Tempo sim.: MAX=4 → CLK=5 MHz → 1 CLK ≡ 1 s
+//             24 h = 86 400 * 200 ns = 17 280 000 ns
+// =============================================================
+
+module tb_relogio;
+
+    // ── Entradas ────────────────────────────────────────────
+    reg clk_50mhz;
+    reg RST_G;
+
+    // ── Saídas (displays 7 segmentos) ───────────────────────
+    wire [6:0] seg1, seg2, seg3, seg4;
+
+    // ── Instância do DUT ────────────────────────────────────
+    relogio uut (
+        .clk_50mhz (clk_50mhz),
+        .RST_G     (RST_G),
+        .seg1      (seg1),
+        .seg2      (seg2),
+        .seg3      (seg3),
+        .seg4      (seg4)
+    );
+
+    // Reduz MAX para acelerar a simulação:
+    //   MAX=4 → CLK toggled every 5 * 20 ns = 100 ns → período CLK = 200 ns
+    //   Assim 1 pulso CLK ≡ 1 segundo de relógio
+    defparam uut.div_clk.MAX = 4;
+
+    // ── Clock 50 MHz ────────────────────────────────────────
+    initial clk_50mhz = 1'b0;
+    always  #10 clk_50mhz = ~clk_50mhz;   // período = 20 ns
+
+    // ── Tarefa: imprime estado do relógio ───────────────────
+    task exibe_relogio;
+        input [3:0] hd, hu, md, mu, sd, su;
+        input       sel;
+        begin
+            if (!$isunknown({hd, hu, md, mu, sd, su}))
+                $display("t=%10t ns | %0d%0d:%0d%0d:%0d%0d | SEL=%0b (%s)",
+                         $time,
+                         hd, hu, md, mu, sd, su,
+                         sel, sel ? "MM:SS" : "HH:MM");
+            else
+                $display("t=%10t ns | [AVISO] sinal indefinido (X) detectado — aguardando reset", $time);
+        end
+    endtask
+
+    // ── Registros para detecção de mudança de minuto/hora ───
+    reg [3:0] mu_ant, md_ant, hu_ant, hd_ant;
+
+    // ── Monitor: dispara a cada borda de CLK interno ────────
+    // Exibe somente quando a contagem de minutos ou horas muda,
+    // reduzindo o volume de saída de ~86 400 para ~1 440 linhas.
+    always @(posedge uut.CLK) begin
+        if (!$isunknown({uut.HD, uut.HU, uut.MD, uut.MU,
+                         uut.SD, uut.SU})) begin
+            if ((uut.MU !== mu_ant) || (uut.MD !== md_ant) ||
+                (uut.HU !== hu_ant) || (uut.HD !== hd_ant)) begin
+                exibe_relogio(uut.HD, uut.HU,
+                              uut.MD, uut.MU,
+                              uut.SD, uut.SU,
+                              uut.SEL);
+                mu_ant <= uut.MU;
+                md_ant <= uut.MD;
+                hu_ant <= uut.HU;
+                hd_ant <= uut.HD;
+            end
+        end
+    end
+
+    // ── Verificação de rollover: 23:59 → 00:00 ─────────────
+    always @(posedge uut.CLK) begin
+        if (!$isunknown({uut.HD, uut.HU, uut.MD, uut.MU})) begin
+            // Detecta instante em que HD=2, HU=3, MD=5, MU=9
+            if (uut.HD==4'd2 && uut.HU==4'd3 &&
+                uut.MD==4'd5 && uut.MU==4'd9)
+                $display(">>> t=%0t ns | Rollover iminente: 23:59 detectado", $time);
+            // Detecta retorno a 00:00
+            if (uut.HD==4'd0 && uut.HU==4'd0 &&
+                uut.MD==4'd0 && uut.MU==4'd0 &&
+                uut.SD==4'd0 && uut.SU==4'd0)
+                $display(">>> t=%0t ns | Rollover confirmado: 00:00:00", $time);
+        end
+    end
+
+    // ── Bloco principal ─────────────────────────────────────
+    initial begin
+        $dumpfile("relogio_tb.vcd");
+        $dumpvars(0, tb_relogio);
+
+        // Inicializa registros de comparação com X
+        // para forçar exibição logo após o reset
+        mu_ant = 4'bxxxx;
+        md_ant = 4'bxxxx;
+        hu_ant = 4'bxxxx;
+        hd_ant = 4'bxxxx;
+
+        // ── Reset ativo (RST_G=0 → rst_ativo=1) ────────────
+        RST_G = 1'b0;
+        #100;   // aguarda 5 bordas de clk_50mhz (> 1 período de CLK)
+
+        // ── Libera reset ────────────────────────────────────
+        RST_G = 1'b1;
+        $display("=== Reset liberado em t=%0t ns ===", $time);
+        $display("=== Exibindo mudancas de minuto — 1 CLK (200 ns) = 1 segundo ===");
+
+        // Tempo total = 24 h + 60 s de margem
+        // 86 460 ciclos * 200 ns = 17 292 000 ns
+        #17_292_000;
+
+        $display("=== Simulacao concluida em t=%0t ns ===", $time);
+        $finish;
+    end
+
+endmodule
