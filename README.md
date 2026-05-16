@@ -41,10 +41,6 @@ O sistema exibe dois dígitos por vez, alternando automaticamente entre **Hora:M
 ├── 📁 q2-relogio-contadores-comerciais/ ← LTSpice com CIs comerciais CMOS
 ├── 📁 q3-relogio-verilog/               ← Código HDL + Testbench + síntese FPGA
 ├── 📁 imagens/
-│   ├── circuito-q1.png
-│   ├── circuito-q2.png
-│   ├── fpga-minuto-segundo.png
-│   └── fpga-hora-minuto.png
 └── README.md
 ```
 
