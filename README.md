@@ -37,9 +37,9 @@ O sistema exibe dois dígitos por vez, alternando automaticamente entre **Hora:M
 
 ```
 📁 relogio-digital-sincrono/
-├── 📁 Q1-Portas-Logicas/        ← LTSpice com lógica discreta CMOS
-├── 📁 Q2-Contadores-Comerciais/ ← LTSpice com CIs comerciais CMOS
-├── 📁 Q3-Verilog/               ← Código HDL + Testbench + síntese FPGA
+├── 📁 q1-relogio-portas-logicas/        ← LTSpice com lógica discreta CMOS
+├── 📁 q2-relogio-contadores-comerciais/ ← LTSpice com CIs comerciais CMOS
+├── 📁 q3-relogio-verilog/               ← Código HDL + Testbench + síntese FPGA
 ├── 📁 imagens/
 │   ├── circuito-q1.png
 │   ├── circuito-q2.png
