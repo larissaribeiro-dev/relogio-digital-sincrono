@@ -1,0 +1,57 @@
+# ============================================
+# .gitignore para projetos Verilog / Intel Quartus Prime
+# ============================================
+
+# --- Editores / SO ---
+*.code-workspace
+.history/
+.directory
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- Pastas geradas pelo Quartus ---
+db/
+incremental_db/
+output_files/
+simulation/
+greybox_tmp/
+hc_output/
+PLLJ_output_files/
+qdb/
+hps_isw_handoff/
+hps_sdram_p0_summary_report.html
+
+# --- Relatórios e arquivos de compilação ---
+*.rpt
+*.qar
+*.qarlog
+*.qws
+*.summary
+*.smsg
+*.done
+qar_info.json
+
+# --- Arquivos de bitstream / programação ---
+*.pin
+*.pof
+*.sof
+*.jdi
+*.sld
+*.dpf
+*.qdf
+
+# --- Simulação (ModelSim/QuestaSim) ---
+*.wlf
+*.vcd
+transcript
+*.ini
+work/
+msim/
+
+# --- Backups (não versionar arquivos .bak) ---
+*.bak
+*~
+
+# --- Logs ---
+*.log

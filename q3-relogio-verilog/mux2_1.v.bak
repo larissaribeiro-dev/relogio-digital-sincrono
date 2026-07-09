@@ -1,9 +1,0 @@
-module mux2_1 #(parameter WIDTH = 8)(
-    input  wire [WIDTH-1:0] I0,
-    input  wire [WIDTH-1:0] I1, 
-    input  wire S,  
-    output wire [WIDTH-1:0] Y  
-);
-    assign Y = S ? I1 : I0;
-
-endmodule
