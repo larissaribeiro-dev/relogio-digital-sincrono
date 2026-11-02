@@ -1,0 +1,18 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -48 -64 95 64
+PIN -48 -48 LEFT 8
+PINATTR PinName clk
+PINATTR SpiceOrder 1
+PIN 32 64 BOTTOM 8
+PINATTR PinName reset
+PINATTR SpiceOrder 2
+PIN -48 -16 LEFT 8
+PINATTR PinName enable
+PINATTR SpiceOrder 3
+PIN 96 -48 RIGHT 8
+PINATTR PinName carry
+PINATTR SpiceOrder 4
+PIN -48 16 LEFT 8
+PINATTR PinName VDD
+PINATTR SpiceOrder 5
